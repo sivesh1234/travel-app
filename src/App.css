@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+/* App.css can be empty since we're using Tailwind CSS */
+
+/* App background styling */
+.app-background {
+  background-image: url('../public/images/road-trip-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white overlay */
+  z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-content {
+  position: relative;
+  z-index: 1; /* ensures content stays above the overlay */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Card styling enhancement for content on background */
+.card-on-bg {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Text shadow for better readability against the background */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
