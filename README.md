@@ -44,6 +44,7 @@ The app will be available at [http://localhost:3000](http://localhost:3000).
 1. Enter your start location, destination, and trip duration
 2. The app calls the OpenAI API to generate a detailed itinerary
 3. View your day-by-day road trip plan with overnight locations and attractions
+4. Toggle image generation in advanced settings. Turned off will speed up itinerary generation
 
 ## Customization
 
