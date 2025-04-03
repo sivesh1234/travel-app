@@ -47,7 +47,7 @@ export async function generateTripItinerary(
     Only respond with the JSON, no additional text.`;
 
     const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo-0125',
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a helpful travel planning assistant. Provide realistic travel times based on typical driving speeds and routes.' },
         { role: 'user', content: prompt }
@@ -123,7 +123,7 @@ async function enhanceWithAttractionTravelTimes(day: DayPlanWithTravelTimes): Pr
     Be realistic with driving estimates based on typical routes and speeds.`;
 
     const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo-0125',
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a helpful travel planning assistant that provides accurate travel time estimates.' },
         { role: 'user', content: prompt }
