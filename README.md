@@ -1,6 +1,7 @@
 # Road Trip Planner
 
 A React application that uses OpenAI to generate personalized road trip itineraries.
+Live demo here: https://monumental-quokka-c06924.netlify.app/
 
 ## Features
 
